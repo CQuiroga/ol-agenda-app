@@ -1,0 +1,17 @@
+name: CI básico
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v3
+
+      - name: Verificar que el repositorio se clonó
+        run: ls -la
+
+      - name: Mensaje simulado
+        run: echo "¡CI ejecutado correctamente!"
